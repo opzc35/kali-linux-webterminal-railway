@@ -6,7 +6,6 @@ ENV PORT=7681
 # 1. 更新系统并安装基础依赖、SSH 服务、以及 Kali 官方默认核心工具集 (kali-linux-headless)
 RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y --no-install-recommends \
     ca-certificates wget curl git openssh-server tini fastfetch \
-    kali-linux-headless \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
