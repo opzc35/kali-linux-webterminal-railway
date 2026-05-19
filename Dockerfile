@@ -25,7 +25,7 @@ RUN set -eux; \
 
 # 3. 配置 SSH 服务（允许 root 登录与密码认证）
 # ⚠️ 请将下面的 'kali' 改为你自定义的强密码
-RUN mkdir /var/run/sshd \
+RUN mkdir -p /var/run/sshd \
     && echo 'root:kali' | chpasswd \
     && sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
     && sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
