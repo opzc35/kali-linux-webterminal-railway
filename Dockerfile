@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-     ca-certificates wget curl git python3 python3-pip tini fastfetch
+     ca-certificates wget curl git python3 python3-pip tini fastfetch && apt install -y kali-linux-headless
 
 # Ensure the target dir exists
 RUN mkdir -p /usr/local/bin
